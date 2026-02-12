@@ -83,9 +83,3 @@ ggplot(data = diamonds, mapping = aes(x = carat)) +
 
 ggplot(penguins, aes(body_mass_g, color = species, fill = species)) + 
   geom_density(alpha = 0.5)
-
-install.packages("rmarkdown")
-
-knitr::spin("r_1.R", knit = FALSE)
-knitr::spin("/Users/kunalshukla/silver-funicular/r_1/r_1.R", knit = FALSE)
-

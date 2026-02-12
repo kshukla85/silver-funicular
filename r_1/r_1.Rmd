@@ -1,4 +1,5 @@
 
+```{r}
 library(tidyverse)
 
 library(ggrepel)
@@ -88,4 +89,5 @@ install.packages("rmarkdown")
 
 knitr::spin("r_1.R", knit = FALSE)
 knitr::spin("/Users/kunalshukla/silver-funicular/r_1/r_1.R", knit = FALSE)
+```
 
