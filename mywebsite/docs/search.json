@@ -1,0 +1,23 @@
+[
+  {
+    "objectID": "r_1.html",
+    "href": "r_1.html",
+    "title": "mywebsite",
+    "section": "",
+    "text": "library(tidyverse)\nlibrary(ggrepel)\npenguins glimpse(penguins)\nView(penguins)\n?penguins\nggplot(data = penguins, mapping = aes(x = flipper_length_mm, y = body_mass_g)) + geom_point(mapping = aes(color = species, shape = species)) + geom_smooth(method = “lm”) + labs( title = “Body Mass and Flipper Length”, subtitle = “Dimensions for Adelie, Chinstrap, and Gentoo Penguins”, x = “bill_depth_mm”, y = “bill_length_mm (g)”, color = “Species”, shape = “Species” ) + scale_color_colorblind()\nggplot( data = penguins, mapping = aes(x = flipper_length_mm, y = body_mass_g, color = island) ) + geom_point() + geom_smooth(se = FALSE)\nggplot( data = penguins, mapping = aes(x = flipper_length_mm, y = body_mass_g) ) + geom_point() + geom_smooth()\nggplot() + geom_point( data = penguins, mapping = aes(x = flipper_length_mm, y = body_mass_g)) + geom_smooth( data = penguins, mapping = aes(x = flipper_length_mm, y = body_mass_g) )\nggplot( data = penguins, mapping = aes(x = flipper_length_mm, y = body_mass_g)) + geom_point()\nggplot(data = penguins, mapping = aes(x = flipper_length_mm, y = body_mass_g)) + geom_point()\npenguins |&gt; ggplot(aes(x = flipper_length_mm, y = body_mass_g)) + geom_point()\nggplot(penguins, aes(x = fct_infreq(species))) + geom_bar()\nggplot(penguins, aes(x = body_mass_g)) + geom_histogram(binwidth = 200)\nggplot(penguins, aes(x = body_mass_g)) + geom_density()\nggplot(penguins, aes(y = species)) + geom_bar()\nggplot(penguins, aes(x = species)) + geom_bar(color = “red”) ggplot(penguins, aes(x = species)) + geom_bar(fill = “red”)\nggplot(data = diamonds, mapping = aes(x = carat)) + geom_histogram(binwidth = 1)\nggplot(penguins, aes(body_mass_g, color = species, fill = species)) + geom_density(alpha = 0.5)"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "mywebsite",
+    "section": "",
+    "text": "This is a Quarto website.\nTo learn more about Quarto websites visit https://quarto.org/docs/websites."
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "About this site"
+  }
+]
