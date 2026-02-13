@@ -1,6 +1,7 @@
-
+install.packages("ggrepel")
+install.packages("palmerpenguins")
 library(tidyverse)
-
+library(palmerpenguins)
 library(ggrepel)
 
 penguins
@@ -84,8 +85,45 @@ ggplot(data = diamonds, mapping = aes(x = carat)) +
 ggplot(penguins, aes(body_mass_g, color = species, fill = species)) + 
   geom_density(alpha = 0.5)
 
-install.packages("rmarkdown")
 
-knitr::spin("r_1.R", knit = FALSE)
-knitr::spin("/Users/kunalshukla/silver-funicular/r_1/r_1.R", knit = FALSE)
+ggplot(penguins, aes(x = island, fill = species)) + 
+  geom_bar(position = "fill") +
+  labs( y = "proportion")
 
+ggplot(penguins, aes(x= flipper_length_mm, y = body_mass_g)) +
+  geom_point(aes(color = "species", shape = "island")) +
+  facet_wrap(~island)
+?mpg
+ggplot(mpg, aes(x = hwy, y = displ)) +
+  geom_point(aes(color = "linewidth", shape = "linewidth"))
+
+# Here, linewidth actually changes the visual thickness of the trend line
+ggplot(data = mpg, aes(x = displ, y = hwy)) + 
+  geom_smooth(aes(linewidth = displ), se = FALSE)
+
+ggplot(penguins, aes(x = flipper_length_mm, y = body_mass_g)) +
+  geom_point(aes(color = "species"))
+
+
+ggplot(data = penguins, aes(x = bill_length_mm, y = bill_depth_mm)) +
+  geom_point() +
+  facet_wrap(~species)
+
+
+ggplot(
+  data = penguins,
+  mapping = aes(
+    x = bill_length_mm, y = bill_depth_mm, 
+    color = species, shape = species
+  )
+) +
+  geom_point() 
+ggplot(penguins, aes(x = island, fill = species)) +
+  geom_bar(position = "fill")
+ggplot(penguins, aes(x = species, fill = island)) +
+  geom_bar(position = "fill")
+
+
+ggplot(penguins, aes(x= flipper_length_mm, y = body_mass_g)) +
+  geom_point()
+ggsave(filename = "penguin-plot.png")
