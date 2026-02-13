@@ -1,2 +1,0 @@
-# silver-funicular
-R projects
